@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  font-family: "Unbounded", cursive;
+}
+
 html,
 body {
   width: 100%;

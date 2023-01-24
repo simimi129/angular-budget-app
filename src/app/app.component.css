@@ -9,8 +9,14 @@
 }
 
 .bg-top {
-  height: 50%;
-  background: #000;
+  height: 60%;
+  background: linear-gradient(
+    to bottom right,
+    #0c1727 0%,
+    #273446 35%,
+    #272c3a 65%,
+    #020615 100%
+  );
   border-radius: 20px;
 }
 
@@ -55,7 +61,6 @@
 .nav {
   color: white;
   height: 10%;
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
@@ -69,7 +74,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 12px;
   width: 100%;
   flex-grow: 1;
 }
@@ -77,21 +82,22 @@
 .cards-row {
   height: 40%;
   display: flex;
-  gap: 20px;
+  gap: 12px;
 }
 
 .cards-row-second {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   flex-grow: 1;
 }
 
 .card {
   height: 100%;
-  background-color: seagreen;
   width: 100%;
+  background-color: white;
   border-radius: 10px;
   position: relative;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 .card-text {
