@@ -86,11 +86,57 @@
   flex-grow: 1;
 }
 
-.card,
-.card-left {
+.card {
   height: 100%;
   background-color: seagreen;
   width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  background: #000;
+}
+
+.card-numbers {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-number {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.card-graph {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 80px;
+  width: 180px;
+  background-color: black;
   border-radius: 10px;
 }
 
