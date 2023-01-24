@@ -20,7 +20,9 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding: 0px 60px;
+  padding: 0px 60px 10px 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -35,7 +37,6 @@
 
 .welcome-container {
   color: white;
-  background-color: saddlebrown;
   height: 18%;
   display: flex;
   flex-direction: column;
@@ -52,7 +53,7 @@
 }
 
 .nav {
-  background-color: salmon;
+  color: white;
   height: 10%;
   display: flex;
   align-items: center;
@@ -65,14 +66,33 @@
 
 .cards {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
   width: 100%;
-  height: 30%;
+  flex-grow: 1;
 }
 
-.card {
+.cards-row {
+  height: 30%;
+  display: flex;
+  gap: 20px;
+}
+
+.cards-row-second {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.card,
+.card-left {
   height: 100%;
   background-color: seagreen;
-  width: 30%;
+  width: 100%;
   border-radius: 10px;
+}
+
+.card-left {
+  width: 80%;
 }
