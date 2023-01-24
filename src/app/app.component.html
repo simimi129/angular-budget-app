@@ -3,7 +3,31 @@
   <div class="bg-bottom"></div>
 </div>
 <div class="main">
-  <div class="header">Budget</div>
+  <div class="header">
+    <div class="header-title">Budget</div>
+    <div class="header-icons">
+      <div
+        class="icon-container"
+        (mouseenter)="turnNotifOn()"
+        (mouseleave)="turnNotifOff()"
+      >
+        <ion-icon
+          *ngIf="isNotifOn"
+          class="header-icon"
+          name="notifications"
+        ></ion-icon>
+        <ion-icon *ngIf="!isNotifOn" name="notifications-outline"></ion-icon>
+      </div>
+      <div
+        class="icon-container"
+        (mouseenter)="turnUserOn()"
+        (mouseleave)="turnUserOff()"
+      >
+        <ion-icon *ngIf="isUserOn" class="header-icon" name="person"></ion-icon>
+        <ion-icon *ngIf="!isUserOn" name="person-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
   <hr class="line" />
   <div class="welcome-container">
     <div class="welcome-text">Welcome Simon</div>
@@ -12,7 +36,7 @@
   <div class="nav">
     <span class="nav-item active">Overview</span>
     <span class="nav-item">Analytics</span>
-    <span class="nav-item">Transactions</span>
+    <span class="nav-item">Manage</span>
     <span class="nav-item">Settings</span>
   </div>
   <div class="cards">
