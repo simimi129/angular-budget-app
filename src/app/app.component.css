@@ -32,13 +32,14 @@
 }
 
 .header {
+  font-weight: 300;
   font-size: 2rem;
   color: white;
   padding: 40px 0px 30px 0px;
 }
 
 .line {
-  border: #333 1px solid;
+  border: #444 1px solid;
 }
 
 .welcome-container {
@@ -51,10 +52,12 @@
 
 .welcome-text {
   font-size: 2.2rem;
+  font-weight: 500;
 }
 
 .secondary-text {
   font-size: 1.2rem;
+  font-weight: 300;
   color: #666;
 }
 
@@ -68,6 +71,11 @@
 .nav-item {
   font-size: 1.1rem;
   margin-right: 20px;
+  color: #666;
+}
+
+.active {
+  color: #fff;
 }
 
 .cards {
@@ -109,8 +117,13 @@
 }
 
 .card-title {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
+}
+
+.card-time {
+  font-size: 0.9rem;
+  color: #666;
 }
 
 .card-icon {
@@ -132,7 +145,7 @@
 }
 
 .card-number {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
