@@ -134,6 +134,7 @@
   width: auto;
   border-radius: 10px;
   height: 68%;
+  overflow-y: hidden;
 }
 
 .table-header {
@@ -142,13 +143,32 @@
   font-size: 0.8rem;
   border-bottom: 1px solid #ddd;
   height: 13%;
+  margin-bottom: 20px;
 }
 
-.header-name {
+.header-name,
+.list-item-name {
   flex-grow: 1;
 }
 
-.header-item {
+.header-item,
+.list-item-data {
   width: 20%;
   text-align: center;
+}
+
+.table-list {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.table-list::-webkit-scrollbar {
+  display: none;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 20%;
 }
