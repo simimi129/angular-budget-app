@@ -48,7 +48,7 @@
   font-weight: 600;
 }
 
-.card-time {
+.card-p {
   font-size: 0.9rem;
   color: #666;
 }
@@ -57,7 +57,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  height: 30%;
+  height: 25%;
   aspect-ratio: 1/1;
   border-radius: 10px;
   display: flex;
@@ -124,4 +124,31 @@
 
 .card-left {
   width: 80%;
+}
+
+.card-table {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  width: auto;
+  border-radius: 10px;
+  height: 68%;
+}
+
+.table-header {
+  display: flex;
+  color: #666;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  height: 13%;
+}
+
+.header-name {
+  flex-grow: 1;
+}
+
+.header-item {
+  width: 20%;
+  text-align: center;
 }
