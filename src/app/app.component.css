@@ -104,5 +104,24 @@
 }
 
 .active {
-  color: #fff;
+  animation-name: color;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.animation-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+}
+
+@keyframes color {
+  from {
+    color: #666;
+  }
+
+  to {
+    color: #fff;
+  }
 }
