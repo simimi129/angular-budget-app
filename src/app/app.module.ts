@@ -4,10 +4,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
-import { ManageComponent } from './manage/manage.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 @NgModule({
-  declarations: [AppComponent, OverviewComponent, AnalyticsComponent, ManageComponent],
+  declarations: [
+    AppComponent,
+    OverviewComponent,
+    AnalyticsComponent,
+    TransactionsComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
