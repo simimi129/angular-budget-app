@@ -2,102 +2,16 @@
   <div class="card-table">
     <div class="table-header">
       <span class="header-name">NAME</span>
-      <span class="header-item">TYPE</span>
-      <span class="header-item">DATE</span>
+      <!-- <span class="header-item">TYPE</span>
+      <span class="header-item">DATE</span> -->
       <span class="header-item">AMOUNT</span>
-      <span class="header-item">STATUS</span>
     </div>
     <div class="table-list">
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
-      </div>
-      <div class="list-item">
-        <div class="list-item-name">Sparos kifli</div>
-        <div class="list-item-data">Groceries</div>
-        <div class="list-item-data">2022.12.09.</div>
-        <div class="list-item-data">$1,00</div>
-        <div class="list-item-data">Completed</div>
+      <div class="list-item" *ngFor="let transaction of transactions$ | async">
+        <div class="list-item-name">{{ transaction.name }}</div>
+        <!-- <div class="list-item-data">{{ transaction.type }}</div>
+        <div class="list-item-data">{{ transaction.date }}</div> -->
+        <div class="list-item-data">{{ transaction.amount }}</div>
       </div>
     </div>
   </div>

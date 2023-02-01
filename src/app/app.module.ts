@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { TransactionsComponent } from './transactions/transactions.component';
     AnalyticsComponent,
     TransactionsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
