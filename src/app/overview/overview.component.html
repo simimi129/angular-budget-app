@@ -23,7 +23,7 @@
         <ion-icon class="ion-icon icon2" name="add-circle"></ion-icon>
       </div>
       <div class="card-numbers">
-        <div class="card-number">$600.000</div>
+        <div class="card-number">{{ income$ | async }} Ft</div>
         <div class="card-diff plus">+ 12% last year</div>
       </div>
       <div class="card-graph"></div>
@@ -37,7 +37,7 @@
         <ion-icon class="ion-icon icon3" name="remove-circle"></ion-icon>
       </div>
       <div class="card-numbers">
-        <div class="card-number">$400.000</div>
+        <div class="card-number">{{ outcome$ | async }} Ft</div>
         <div class="card-diff minus">- 9% last year</div>
       </div>
       <div class="card-graph"></div>
@@ -59,54 +59,14 @@
           <span class="header-item">STATUS</span>
         </div>
         <div class="table-list">
-          <div class="list-item">
-            <div class="list-item-name">Sparos kifli</div>
-            <div class="list-item-data">Groceries</div>
-            <div class="list-item-data">2022.12.09.</div>
-            <div class="list-item-data">$1,00</div>
-            <div class="list-item-data">Completed</div>
-          </div>
-          <div class="list-item">
-            <div class="list-item-name">Sparos kifli</div>
-            <div class="list-item-data">Groceries</div>
-            <div class="list-item-data">2022.12.09.</div>
-            <div class="list-item-data">$1,00</div>
-            <div class="list-item-data">Completed</div>
-          </div>
-          <div class="list-item">
-            <div class="list-item-name">Sparos kifli</div>
-            <div class="list-item-data">Groceries</div>
-            <div class="list-item-data">2022.12.09.</div>
-            <div class="list-item-data">$1,00</div>
-            <div class="list-item-data">Completed</div>
-          </div>
-          <div class="list-item">
-            <div class="list-item-name">Sparos kifli</div>
-            <div class="list-item-data">Groceries</div>
-            <div class="list-item-data">2022.12.09.</div>
-            <div class="list-item-data">$1,00</div>
-            <div class="list-item-data">Completed</div>
-          </div>
-          <div class="list-item">
-            <div class="list-item-name">Sparos kifli</div>
-            <div class="list-item-data">Groceries</div>
-            <div class="list-item-data">2022.12.09.</div>
-            <div class="list-item-data">$1,00</div>
-            <div class="list-item-data">Completed</div>
-          </div>
-          <div class="list-item">
-            <div class="list-item-name">Sparos kifli</div>
-            <div class="list-item-data">Groceries</div>
-            <div class="list-item-data">2022.12.09.</div>
-            <div class="list-item-data">$1,00</div>
-            <div class="list-item-data">Completed</div>
-          </div>
-          <div class="list-item">
-            <div class="list-item-name">Sparos kifli</div>
-            <div class="list-item-data">Groceries</div>
-            <div class="list-item-data">2022.12.09.</div>
-            <div class="list-item-data">$1,00</div>
-            <div class="list-item-data">Completed</div>
+          <div
+            class="list-item"
+            *ngFor="let transaction of transactions$ | async"
+          >
+            <div class="list-item-name">{{ transaction.name }}</div>
+            <!-- <div class="list-item-data">{{ transaction.type }}</div>
+            <div class="list-item-data">{{ transaction.date }}</div> -->
+            <div class="list-item-data">{{ transaction.amount }}</div>
           </div>
         </div>
       </div>
