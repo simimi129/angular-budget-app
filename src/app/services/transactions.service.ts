@@ -14,6 +14,7 @@ export class TransactionsService {
   private transactions$ = new BehaviorSubject<Transaction[]>([]);
   private income$ = new BehaviorSubject<number>(0);
   private outcome$ = new BehaviorSubject<number>(0);
+  private total$ = new BehaviorSubject<number>(0);
 
   constructor(private http: HttpClient) {}
 
@@ -33,7 +34,13 @@ export class TransactionsService {
         this.transactions$.next(transactions);
         this.income$.next(income);
         this.outcome$.next(outcome);
-        console.log(this.transactions$);
+      });
+    this.http
+      .get<{ total: number }>(
+        'https://ng-budget-b59c9-default-rtdb.europe-west1.firebasedatabase.app/total.json'
+      )
+      .subscribe(({ total }) => {
+        this.total$.next(total);
       });
   }
 
@@ -47,5 +54,9 @@ export class TransactionsService {
 
   public getOutcome(): Observable<number> {
     return this.outcome$;
+  }
+
+  public getTotal(): Observable<number> {
+    return this.total$;
   }
 }
